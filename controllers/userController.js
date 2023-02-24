@@ -27,6 +27,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
             url: myCloud.secure_url,
         },
     });
+    console.log(user, "register")
     const token = user.getJWTToken();
 
     sendToken(user, 200, res)
