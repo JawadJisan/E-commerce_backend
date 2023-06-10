@@ -34,6 +34,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
     // res.status(200).json({ success: true, token })
 });
 
+
 // Login User
 exports.loginUser = catchAsyncError(async (req, res, next) => {
     const { email, password } = req.body;
@@ -61,6 +62,7 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
     // res.status(200).json({ success: true, token, user })
     sendToken(user, 200, res)
 });
+
 
 // Logout User
 exports.logout = catchAsyncError(async (req, res, next) => {
@@ -159,6 +161,7 @@ exports.getUserDetails = catchAsyncError(async (req, res, next) => {
         user,
     });
 });
+
 
 // update User password
 exports.updatePassword = catchAsyncError(async (req, res, next) => {

@@ -36,6 +36,7 @@ const server = app.listen(port, () => {
 app.get('/hello', (req, res) => {
     res.send('Hello Hello working! YaY!');
 });
+
 app.post("/create-payment-intent", async (req, res) => {
     const price = req.body.price;
     console.log(price)
